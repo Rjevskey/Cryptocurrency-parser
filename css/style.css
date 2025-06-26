@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+@font-face {
+    font-family: Silkscreen-regular;
+    src: url(/fonts/Silkscreen-Regular.ttf);
+}
+.main-container {
+    margin: 10px 40px;
+    border: 1px, solid green;
+    color: white;
+}
+
+p,
+h1,
+h2,
+h3 {
+    font-family: silkscreen-regular;
+}
+/************************HEADER***************************/
+
+.navigation-container {
+    border: 1px, solid green;
+    display: flex;
+    justify-content: center;
+}
+
+/************************MAIN***************************/
+
+.main-container {
+    border: 1px, solid green;
+}
