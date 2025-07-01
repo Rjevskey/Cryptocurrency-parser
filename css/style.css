@@ -10,7 +10,15 @@ body {
     font-family: Silkscreen-regular;
     src: url(/fonts/Silkscreen-Regular.ttf);
 }
-.main-container {
+
+@font-face{
+    font-family: PressStart-Regular ;
+    src: url(/fonts/PressStart2P-Regular.ttf);
+}
+
+
+
+.general-container {
     margin: 10px 40px;
     /* border: 1px, solid green; */
     color: white;
@@ -21,7 +29,8 @@ body {
 p,
 h1,
 h2,
-h3{
+h3,
+h4{
     font-family: silkscreen-regular;
 }
 
@@ -34,9 +43,10 @@ td, th{
 /************************HEADER***************************/
 .logo-project{
     width: 20%;
+    margin: 40px;
 
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -57,8 +67,11 @@ td, th{
 
 /************************MAIN***************************/
 
-/* .main-container {
-} */
+.main-container {
+    width: 100%;
+    
+    display: flex;
+}
 
 /* .main-container__header-box{
 } */
@@ -70,6 +83,7 @@ td, th{
 }
 
 .main-container__table-box{
+    width: 50%;
     border: 1px, solid green;
 }
 
@@ -82,12 +96,19 @@ td, th{
     border-collapse: collapse;
     border: 1px solid green;
 }
-
+.table-box__cell{
+    display: flex;
+}
 .table-box__style-nameCoin{
+    width: 50%;
     text-align: left;
-    padding: 2px 10px;
+    /* padding: 2px 10px; */
 }
 
+.table-box__style-icons{
+    width: 24px;
+    height: 24px;
+}
 
 /************************FOOTER***************************/
 
@@ -101,4 +122,10 @@ td, th{
 
     border: 1px solid white;
     background-color: rgb(15, 15, 15);
+}
+
+
+.footer-box__text-project-style{
+    font-family: PressStart-Regular;
+    font-size: 10px;
 }
