@@ -30,7 +30,8 @@ p,
 h1,
 h2,
 h3,
-h4{
+h4,
+a{
     font-family: silkscreen-regular;
 }
 
@@ -40,6 +41,23 @@ td, th{
 }
 
 
+a:hover{
+    color: #ff0000;
+    transition: color 0.3s;
+}
+
+a:active {
+    color: #ff0000;
+    transition: color 0.3s;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: #808000;
+}
 /************************HEADER***************************/
 .logo-project{
     width: 20%;
@@ -91,6 +109,7 @@ td, th{
     width: 50%;
     margin: 15px 10px;
 
+    white-space: nowrap;
     text-align: center;
     
     border-collapse: collapse;
@@ -124,8 +143,29 @@ td, th{
     background-color: rgb(15, 15, 15);
 }
 
+.footer-box__my-contacts{
+    display: flex;
+    justify-content: center;
+}
 
 .footer-box__text-project-style{
+        font-family: PressStart-Regular;
+        font-size: 10px;
+}
+
+.footer-box__my-contacts{
+    margin-top: 25px;
+}
+
+.footer-box__my-contacts-telegram{
+        display: flex;
+        justify-content: center;
+}
+.my-contacts-icon
+
+.my-contacts-telegram-style{
     font-family: PressStart-Regular;
     font-size: 10px;
+
+    text-decoration: none;
 }
