@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/img/logo-project/icon/icon-red-eye.png">
+        <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="/css/reset.css" />
         <link rel="stylesheet" href="/css/style.css" />
         <title>Crypto-eye</title>
@@ -195,8 +196,6 @@
                         </table>
                     </div>
 
-
-
                     <div class="main-container__table-box">
                         <table class="table-box__style">
                         <tr>
@@ -358,6 +357,34 @@
                         </table>
                     </div>
                 </div>
+        <!-- Контейнер слайдера -->
+        <div class="swiper crypto-slider">
+            <!-- Обертка слайдов -->
+                <div class="swiper-wrapper">
+                        <!-- Слайд 1 -->
+                    <div class="swiper-slide">
+                        <div class="crypto-card">
+                            <h3>Bitcoin</h3>
+                            <p>$61,250</p>
+                        <span class="change">+2.3%</span>
+                        </div>
+                    </div>
+                        <!-- Слайд 2 -->
+                    <div class="swiper-slide">
+                        <div class="crypto-card">
+                            <h3>Ethereum</h3>
+                            <p>$3,420</p>
+                            <span class="change">-1.1%</span>
+                        </div>
+                    </div>
+                        <!-- Добавьте остальные слайды... -->
+                </div>
+        <!-- Элементы управления -->
+            <div class="swiper-pagination"></div>         <!-- Точки-пагинация -->
+            <div class="swiper-button-prev"></div>        <!-- Кнопка "назад" -->
+            <div class="swiper-button-next"></div>        <!-- Кнопка "вперед" -->
+        </div>
+    </div>
             </main>
             <footer>
                 <div class="footer-box">
@@ -375,6 +402,7 @@
                 </div>
             </footer>
         </div>
+        <script src="node_modules/swiper/swiper-bundle.min.js"></script>
         <script src="/script.js"></script>
     </body>
 </html>

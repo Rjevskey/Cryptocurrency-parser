@@ -58,7 +58,40 @@ a:link {
 a:visited {
     color: #808000;
 }
-/************************HEADER***************************/
+
+/************************SLAIDER-START***************************/
+
+.crypto-slider {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+}
+
+.crypto-card {
+    background: rgb(15, 15, 15);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.change {
+  color: #27ae60; /* Зеленый для роста */
+}
+
+/* Стили для элементов управления */
+.swiper-button-prev, .swiper-button-next {
+  color: #3366ff !important; /* Синий цвет */
+}
+
+.swiper-pagination-bullet-active {
+  background: #3366ff !important;
+}
+
+/************************SLAIDER-END***************************/
+
+/************************HEADER-START***************************/
 .logo-project{
     width: 20%;
     margin: 40px;
@@ -82,8 +115,9 @@ a:visited {
     align-items: center;
 }
 
+/************************HEADER-ENDT***************************/
 
-/************************MAIN***************************/
+/************************MAIN-START***************************/
 
 .main-container {
     width: 100%;
@@ -128,8 +162,9 @@ a:visited {
     width: 24px;
     height: 24px;
 }
+/************************MAIN-END***************************/
 
-/************************FOOTER***************************/
+/************************FOOTER-START***************************/
 
 
 .footer-box{
@@ -169,3 +204,5 @@ a:visited {
 
     text-decoration: none;
 }
+
+/************************FOOTER-END***************************/

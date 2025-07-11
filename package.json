@@ -1,0 +1,23 @@
+{
+  "name": "cryptocurrency-parser",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rjevskey/Cryptocurrency-parser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rjevskey/Cryptocurrency-parser/issues"
+  },
+  "homepage": "https://github.com/Rjevskey/Cryptocurrency-parser#readme",
+  "description": "",
+  "dependencies": {
+    "swiper": "^11.2.10"
+  }
+}
