@@ -61,11 +61,11 @@ a:visited {
 }
 
 /************************SLAIDER-START***************************/
-.swiper-wrapper{
-    padding-top: 10px ;
-}
+
+
 
 .swiper-slide{
+    margin-top: 30px;
     padding: 10px;
 
     display: flex;
@@ -77,9 +77,23 @@ a:visited {
 }
 /************************PAGINATION-START*************************/
 .swiper-pagination{
-    color: green;
     background: rgb(15, 15, 15);
 }
+
+.swiper-pagination-bullet-active {
+    background: green;
+}
+
+.swiper-pagination-bullet:hover {
+background: lightgreen; 
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+    color: green;
+    
+}
+
 
 
 /************************PAGINATION-END***************************/
