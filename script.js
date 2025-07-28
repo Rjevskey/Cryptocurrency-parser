@@ -24,3 +24,38 @@ const swiper = new Swiper('.crypto-slider', {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Элементы
+  const modal = document.getElementById('myModalReg');
+  const openBtn = document.getElementById('openRegModal');
+  const closeBtn = document.querySelector('.header__modal-windows__close');
+  
+  // Проверка
+  if (!modal || !openBtn) {
+    console.error('Не найдены элементы модального окна!');
+    return;
+  }
+
+  // Открытие
+  openBtn.addEventListener('click', function() {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Закрытие
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    });
+  }
+
+  // Закрытие по клику вне окна
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+});

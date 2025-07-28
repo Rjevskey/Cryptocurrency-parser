@@ -32,7 +32,8 @@ h2,
 h3,
 h4,
 a,
-span{
+span,
+button{
     font-family: silkscreen-regular;
 }
 
@@ -101,13 +102,100 @@ background: lightgreen;
 
 /************************SLAIDER-END***************************/
 
+/**************************MODAL_WINDOWS_REG-START*************************/
+.header__modal-windows {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.header__modal-windows___content {
+    border: 1px solid green;
+    background: rgb(15, 15, 15);
+    color: white;
+
+    margin: 100px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.header__modal-windows__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header__modal-windows__close:hover{
+    color: #ff0000;
+    transition: color 0.6s;
+}
+
+.header__modal-windows__close:active{
+    color: #00ff6a;
+    transition: color 0.6s;
+}
+.header__modal-input-style{
+    margin-bottom: 10px;
+}
+/************************MODAL_WINDOWS_REG-END***************************/
+
+
 /************************HEADER-START***************************/
+
+.header-box{
+display: flex;
+justify-content: space-between;
+
+}
+
 .logo-project{
     width: 20%;
     margin: 40px;
-
+    
     display: flex;
     align-items: center;
+}
+
+.logo-project__link{
+    display: inline-block;
+}
+
+.header__button-registration__box{
+    margin-top: 20px;
+}
+
+.button-registration-style{
+    width: 140px;
+    height: 40px;
+
+
+    border: 1px solid green;
+    border-radius: 10px;
+
+    color: white;
+    background: rgb(15, 15, 15) ;
+}
+
+.button-registration-style:hover{
+    color: #ff0000;
+    transition: color 0.6s;
+}
+
+.button-registration-style:active{
+    color: #00ff6a;
+    transition: color 0.2s;
 }
 
 
