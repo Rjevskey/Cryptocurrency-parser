@@ -1,3 +1,12 @@
+// Принудительно сбрасываем состояние :visited при загрузке
+document.querySelectorAll('a').forEach(link => {
+  link.style.setProperty('color', 'white', 'important');
+});
+
+
+
+
+
 const swiper = new Swiper('.crypto-slider', {
   loop: true, 
   slidesPerView: 2, // Показываем 2 карточки
