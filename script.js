@@ -68,3 +68,71 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+
+
+
+
+function bitcoinPrice() {
+  fetch('https://api.allorigins.win/raw?url=https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector('.btc-price').textContent = `$${data.bitcoin.usd}`;
+      document.querySelector('.btc-slider').textContent= `$${data.bitcoin.usd}`;
+    })
+    .catch(error => console.log('Ошибка:', error));
+}
+
+bitcoinPrice();
+setInterval(bitcoinPrice, 1000);
+
+
+function ethereumPrice(){
+fetch('https://api.allorigins.win/raw?url=https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
+.then(response => response.json())
+.then(data=> {
+  document.querySelector('.eth-price').textContent =`$${data.ethereum.usd}`
+  document.querySelector('.eth-slider').textContent =`$${data.ethereum.usd}`
+})
+}
+ethereumPrice()
+setInterval(ethereumPrice, 15000);
+
+function tetherPrice(){
+  fetch('https://api.allorigins.win/raw?url=https://api.coingecko.com/api/v3/simple/price?ids=tether&vs_currencies=usd')
+.then(response=>response.json())
+.then(data=> {
+  document.querySelector('.ttr-slider').textContent= `$${data.tether.usd}`
+  document.querySelector('.ttr-price').textContent= `$${data.tether.usd}`
+})
+}
+tetherPrice()
+setInterval(tetherPrice, 30000);
+
+
+function xrpPrice (){
+  fetch('https://api.allorigins.win/raw?url=https://api.coingecko.com/api/v3/simple/price?ids=ripple&vs_currencies=usd')
+    .then(response=>response.json())
+    .then(data=>{
+      document.querySelector('.xrp-slider').textContent= `$${data.ripple.usd}`
+      document.querySelector('.xrp-price').textContent= `$${data.ripple.usd}`
+    })
+}
+
+xrpPrice()
+setInterval(xrpPrice, 45000);
+
+// function (){
+
+// }
+
+// ()
+// setInterval(, 60000);
+
+// function (){
+
+// }
+
+// ()
+// setInterval(, 60000);
