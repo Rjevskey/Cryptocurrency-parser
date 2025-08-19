@@ -27,9 +27,9 @@ body {
     color: white;
 }
 
-a:visited{
+/* a:visited{
 color: white !important;
-}
+} */
 
 p,
 h1,
@@ -272,36 +272,37 @@ justify-content: space-between;
         font-family: PressStart-Regular;
         font-size: 10px;
 }
-
+/************************FOOTER-CONTACTS START***************************/
 .footer-box__my-contacts{
     margin-top: 25px;
 }
 
 .footer-box__my-contacts-telegram{
-        display: flex;
-        justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.my-contacts-icon
 
-.my-contacts-telegram-style{
+.footer-box__my-contacts-telegram a {
     font-family: PressStart-Regular;
     font-size: 10px;
-    
     color: white;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.my-contacts-telegram-style:hover{
-    color: red  !important;
-    transition: color 0.6s
+.footer-box__my-contacts-telegram a:hover {
+    color: red;
 }
 
-.my-contacts-telegram-style:active{
-    color: #00ff6a  !important;
-    transition: color 0.2s;
+.footer-box__my-contacts-telegram a:active {
+    color: #00ff6a;
 }
 
-.my-contacts-telegram-style:visited{
-    color: darkolivegreen  !important;
-
+.footer-box__my-contacts-telegram a:visited {
+    color: darkolivegreen !important;
 }
+
+/************************FOOTER-CONTACTS START*****************/
+
 /************************FOOTER-END***************************/

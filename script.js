@@ -1,11 +1,3 @@
-// Принудительно сбрасываем состояние :visited при загрузке
-document.querySelectorAll('a').forEach(link => {
-  link.style.setProperty('color', 'white', 'important');
-});
-
-
-
-
 
 const swiper = new Swiper('.crypto-slider', {
   loop: true, 
@@ -72,67 +64,130 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+const baseTimeInterval = 30000;
 
 function bitcoinPrice() {
-  fetch('https://api.allorigins.win/raw?url=https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+  fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
     .then(response => response.json())
     .then(data => {
       document.querySelector('.btc-price').textContent = `$${data.bitcoin.usd}`;
       document.querySelector('.btc-slider').textContent= `$${data.bitcoin.usd}`;
     })
-    .catch(error => console.log('Ошибка:', error));
+    .catch(error => console.log('Ошибка в разделе Биткоина:', error));
 }
 
 bitcoinPrice();
-setInterval(bitcoinPrice, 1000);
+setInterval(bitcoinPrice, baseTimeInterval);
 
 
 function ethereumPrice(){
-fetch('https://api.allorigins.win/raw?url=https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
 .then(response => response.json())
 .then(data=> {
   document.querySelector('.eth-price').textContent =`$${data.ethereum.usd}`
   document.querySelector('.eth-slider').textContent =`$${data.ethereum.usd}`
 })
+.catch(error => console.log('Ошибка в разделе Эфириума:', error));
 }
 ethereumPrice()
-setInterval(ethereumPrice, 15000);
+setInterval(ethereumPrice, baseTimeInterval);
 
 function tetherPrice(){
-  fetch('https://api.allorigins.win/raw?url=https://api.coingecko.com/api/v3/simple/price?ids=tether&vs_currencies=usd')
+  fetch('https://api.coingecko.com/api/v3/simple/price?ids=tether&vs_currencies=usd')
 .then(response=>response.json())
 .then(data=> {
   document.querySelector('.ttr-slider').textContent= `$${data.tether.usd}`
   document.querySelector('.ttr-price').textContent= `$${data.tether.usd}`
 })
+.catch(error => console.log('Ошибка в разделе Тезера:', error));
 }
 tetherPrice()
-setInterval(tetherPrice, 30000);
+setInterval(tetherPrice, baseTimeInterval*2);
 
 
 function xrpPrice (){
-  fetch('https://api.allorigins.win/raw?url=https://api.coingecko.com/api/v3/simple/price?ids=ripple&vs_currencies=usd')
+  fetch('https://api.coingecko.com/api/v3/simple/price?ids=ripple&vs_currencies=usd')
     .then(response=>response.json())
     .then(data=>{
       document.querySelector('.xrp-slider').textContent= `$${data.ripple.usd}`
       document.querySelector('.xrp-price').textContent= `$${data.ripple.usd}`
     })
+    .catch(error => console.log('Ошибка в разделе XRP:', error));
 }
 
 xrpPrice()
-setInterval(xrpPrice, 45000);
+setInterval(xrpPrice, baseTimeInterval*2);
 
-// function (){
+function bnbPrice (){
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=binancecoin&vs_currencies=usd')
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector('.bnb-slider').textContent = `$${data.binancecoin.usd}`;
+    document.querySelector('.bnb-price').textContent = `$${data.binancecoin.usd}`;
+  })
+  .catch(error=>console.log('Ошибка в разделе BNB:', error));
+}
 
-// }
+bnbPrice()
+setInterval(bnbPrice, baseTimeInterval*2);
 
-// ()
-// setInterval(, 60000);
+function solanaPrice (){
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd')
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector('.solana-slide').textContent = `$${data.solana.usd}`;
+    document.querySelector('.solana-price').textContent = `$${data.solana.usd}`;
+  })
+.catch(error => console.log('Ошибка в разделе Solana:', error));
+}
 
-// function (){
+solanaPrice ()
+setInterval(solanaPrice, baseTimeInterval)
 
-// }
+function usdcPrice(){
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=usd-coin&vs_currencies=usd')
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector('.usdc-slide').textContent = `$${data['usd-coin'].usd}`;
+    document.querySelector('.usdc-price').textContent = `$${data['usd-coin'].usd}`;
+  })
+  .catch(error => console.log('Ошибка в разделе USDC:', baseTimeInterval));
+}
 
-// ()
-// setInterval(, 60000);
+usdcPrice()
+setInterval(usdcPrice, baseTimeInterval);
+
+
+
+function tronPrice (){
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=tron&vs_currencies=usd')
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector('.tron-price').textContent = `$${data.tron.usd}`;
+  })
+  .catch(error => console.log('Ошибка в разделе TRON:', error));
+}
+
+tronPrice()
+setInterval(tronPrice, baseTimeInterval*2);
+
+function priceDogecoin (){
+  fetch('https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=usd')
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector('.doge-price').textContent = `$${data.dogecoin.usd}`;
+  })
+  .catch(error => console.log('Ошибка в разделе Dogecoin:', error));
+}
+
+priceDogecoin()
+setInterval(priceDogecoin, baseTimeInterval*2);
+
+
+
+
+
+
+document.querySelector('.telegram-link').addEventListener('click', function() {
+    this.style.color = ''; // Сбрасываем встроенные стили при клике
+});
