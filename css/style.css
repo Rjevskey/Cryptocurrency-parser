@@ -49,9 +49,6 @@ td, th{
 
 
 /************************SLAIDER-START***************************/
-
-
-
 .swiper-slide{
     margin-top: 30px;
     padding: 10px;
@@ -65,7 +62,11 @@ td, th{
 }
 /************************PAGINATION-START*************************/
 .swiper-pagination{
-    background: rgb(15, 15, 15);
+    position: relative;
+    z-index: 10; 
+
+    margin-top: 20px;
+
 }
 
 .swiper-pagination-bullet-active {
