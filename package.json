@@ -1,23 +1,30 @@
 {
-  "name": "cryptocurrency-parser",
-  "version": "1.0.0",
-  "main": "script.js",
+  "name": "crypto-app-vue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix --cache",
+    "format": "prettier --write src/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rjevskey/Cryptocurrency-parser.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rjevskey/Cryptocurrency-parser/issues"
-  },
-  "homepage": "https://github.com/Rjevskey/Cryptocurrency-parser#readme",
-  "description": "",
   "dependencies": {
-    "swiper": "^11.2.10"
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "eslint": "^9.37.0",
+    "eslint-plugin-vue": "~10.5.0",
+    "globals": "^16.4.0",
+    "prettier": "3.6.2",
+    "vite": "^7.1.11",
+    "vite-plugin-vue-devtools": "^8.0.3"
   }
 }
