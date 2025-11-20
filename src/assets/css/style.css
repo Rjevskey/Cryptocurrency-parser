@@ -204,12 +204,12 @@ th {
 .main-container {
 	width: 100%;
 
-	flex: 1;
+	display: flex;
 }
 
 .main-container__table-box {
 	display: flex;
-	width: 50%;
+	width: 100%;
 	border:
 		1px,
 		solid green;
@@ -219,6 +219,9 @@ th {
 } */
 
 .main-container__header {
+	display: flex;
+	gap: 20px;
+
 	padding: 10px;
 	width: 30%;
 	border:
