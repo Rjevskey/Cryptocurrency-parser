@@ -1,7 +1,14 @@
 <script setup>
 import { ref } from 'vue'
-
 const isModalOpen = ref(false)
+
+function openModal() {
+	isModalOpen.value = true
+}
+
+function closeModal() {
+	isModalOpen.value = false
+}
 </script>
 
 <template>
@@ -22,14 +29,14 @@ const isModalOpen = ref(false)
 				</div>
 			</div>
 			<div class="header__button-registration__box">
-				<button class="button-registration-style" id="openRegModal" @click="openModal">
+				<button class="button-registration-style" id="openRegModal" @click="openModal()">
 					Registration
 				</button>
 			</div>
-			<div class="navigation-container">
-				<div class="main-tittle">
-					<h1>Current rate for today</h1>
-				</div>
+		</div>
+		<div class="navigation-container">
+			<div class="main-tittle">
+				<h1>Current rate for today</h1>
 			</div>
 		</div>
 	</header>
@@ -39,7 +46,7 @@ const isModalOpen = ref(false)
 		<div class="header__modal-windows___content" @click.stop>
 			<span class="header__modal-windows__close" @click="closeModal">&times;</span>
 			<h2>Registration</h2>
-			<form @submit.prevent="submitForm">
+			<form>
 				<input type="text" placeholder="Name" class="header__modal-input-style" />
 				<input type="email" placeholder="Email" class="header__modal-input-style" />
 				<button type="submit" class="button-registration-style" id="button-modal___reg">
@@ -50,4 +57,4 @@ const isModalOpen = ref(false)
 	</div>
 </template>
 
-<style scoped></style>
+<style></style>

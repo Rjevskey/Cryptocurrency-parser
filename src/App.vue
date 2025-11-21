@@ -1,6 +1,5 @@
 <script setup>
 import HeaderComponent from './components/HeaderComponent.vue'
-import ModalComponent from './components/ModalComponent.vue'
 import CryptoTable from './components/CryptoTable.vue'
 import CurrencyTable from './components/CurrencyTable.vue'
 import CryptoSlider from './components/CryptoSlider.vue'
@@ -11,7 +10,6 @@ import HeaderTables from './components/HeaderTables.vue'
 <template>
 	<div class="general-container">
 		<HeaderComponent />
-		<ModalComponent />
 		<HeaderTables />
 		<div class="main-container">
 			<div class="main-container__table-box">
