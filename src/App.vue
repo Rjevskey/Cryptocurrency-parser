@@ -17,7 +17,9 @@ import HeaderTables from './components/HeaderTables.vue'
 				<CurrencyTable />
 			</div>
 		</div>
-		<CryptoSlider />
+		<div>
+			<CryptoSlider />
+		</div>
 		<FooterComponent />
 	</div>
 </template>
