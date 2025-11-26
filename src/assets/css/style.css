@@ -1,11 +1,22 @@
 body {
-	background-color: rgb(0, 0, 0);
+	background-color: var(--main-bg-color);
 }
 
 * {
 	text-decoration: none !important;
 	-webkit-text-decoration: none !important;
 	-moz-text-decoration: none !important;
+}
+
+:root {
+	--swiper-theme-color: green;
+	--main-bg-color: rgb(0, 0, 0);
+	--container-bg-color: rgb(15, 15, 15);
+	--border-color: green;
+	--text-color: white;
+	--hover-color: #ff0000;
+	--active-color: #00ff6a;
+	--pagination-bg: lightgreen;
 }
 
 @font-face {
@@ -47,10 +58,13 @@ td,
 th {
 	border:
 		1px,
-		solid green;
+		solid var(--border-color);
 }
 
 /************************SLAIDER-START***************************/
+.crypto-card {
+	text-align: center;
+}
 .swiper-slide {
 	margin-top: 30px;
 	padding: 10px;
@@ -61,30 +75,46 @@ th {
 
 	border:
 		2px,
-		solid green;
-	background: rgb(15, 15, 15);
+		solid var(--border-color);
+	background: var(--container-bg-color);
 }
+
 /************************PAGINATION-START*************************/
 .swiper-pagination {
 	position: relative;
 	z-index: 10;
-
 	margin-top: 20px;
 }
 
+.swiper-pagination-bullet {
+	background: var(--pagination-bg);
+	opacity: 0.5;
+}
+
 .swiper-pagination-bullet-active {
-	background: green;
+	background: var(--border-color);
+	opacity: 1;
 }
 
 .swiper-pagination-bullet:hover {
-	background: lightgreen;
+	background: var(--pagination-bg);
+	opacity: 0.8;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-	color: green;
+	color: var(--border-color) !important;
 }
 
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+	color: var(--pagination-bg) !important;
+}
+
+.swiper-button-prev .swiper-navigation-icon,
+.swiper-button-next .swiper-navigation-icon {
+	display: none !important;
+}
 /************************PAGINATION-END***************************/
 
 /************************SLAIDER-END***************************/
@@ -103,9 +133,9 @@ th {
 }
 
 .header__modal-windows___content {
-	border: 1px solid green;
-	background: rgb(15, 15, 15);
-	color: white;
+	border: 1px solid var(--border-color);
+	background: var(--container-bg-color);
+	color: var(--text-color);
 
 	margin: 100px auto;
 	padding: 20px;
@@ -123,12 +153,12 @@ th {
 }
 
 .header__modal-windows__close:hover {
-	color: #ff0000;
+	color: var(--hover-color);
 	transition: color 0.6s;
 }
 
 .header__modal-windows__close:active {
-	color: #00ff6a;
+	color: var(--active-color);
 	transition: color 0.6s;
 }
 .header__modal-input-style {
@@ -167,20 +197,20 @@ th {
 	width: 140px;
 	height: 40px;
 
-	border: 1px solid green;
+	border: 1px solid var(--border-color);
 	border-radius: 10px;
 
-	color: white;
-	background: rgb(15, 15, 15);
+	color: var(--text-color);
+	background: var(--container-bg-color);
 }
 
 .button-registration-style:hover {
-	color: #ff0000;
+	color: var(--hover-color);
 	transition: color 0.6s;
 }
 
 .button-registration-style:active {
-	color: #00ff6a;
+	color: var(--active-color);
 	transition: color 0.2s;
 }
 
@@ -189,7 +219,7 @@ th {
 
 	border:
 		1px,
-		solid green;
+		solid var(--border-color);
 
 	display: flex;
 	justify-content: center;
@@ -214,7 +244,7 @@ th {
 	width: 100%;
 	border:
 		1px,
-		solid green;
+		solid var(--border-color);
 }
 
 /* .main-container__header-box{
@@ -228,7 +258,7 @@ th {
 	width: 30%;
 	border:
 		1px,
-		solid green;
+		solid var(--border-color);
 }
 
 .table-box__style {
@@ -239,7 +269,7 @@ th {
 	text-align: center;
 
 	border-collapse: collapse;
-	border: 1px solid green;
+	border: 1px solid var(--border-color);
 }
 .table-box__cell {
 	display: flex;
@@ -265,8 +295,8 @@ th {
 	position: relative;
 	bottom: 0;
 
-	border: 1px solid white;
-	background-color: rgb(15, 15, 15);
+	border: 1px solid var(--text-color);
+	background-color: var(--container-bg-color);
 }
 
 .footer-box__my-contacts {
@@ -293,17 +323,17 @@ th {
 .footer-box__my-contacts-telegram a {
 	font-family: PressStart-Regular;
 	font-size: 10px;
-	color: white;
+	color: var(--text-color);
 	text-decoration: none;
 	transition: color 0.3s;
 }
 
 .footer-box__my-contacts-telegram a:hover {
-	color: red;
+	color: var(--hover-color);
 }
 
 .footer-box__my-contacts-telegram a:active {
-	color: #00ff6a;
+	color: var(--active-color);
 }
 
 .footer-box__my-contacts-telegram a:visited {

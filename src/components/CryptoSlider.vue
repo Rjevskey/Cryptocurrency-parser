@@ -3,14 +3,19 @@ import { onMounted } from 'vue'
 // @ts-ignore
 import Swiper from 'swiper'
 // @ts-ignore
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 
 onMounted(() => {
 	new Swiper('.crypto-slider', {
-		modules: [Navigation, Pagination],
+		modules: [Navigation, Pagination, Autoplay],
 		loop: true,
-		slidesPerView: 2, // Показываем 2 карточки
+		slidesPerView: 2,
 		spaceBetween: 20,
+		autoplay: {
+			delay: 6000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
