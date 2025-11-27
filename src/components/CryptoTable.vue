@@ -6,8 +6,24 @@
 				<p class="table-box__style-tittle">Currency</p>
 			</th>
 			<th>
-				<p class="table-box__style-tittle">Price</p>
+				<p class="table-box__style-tittle">Price (USD)</p>
 			</th>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="table-box__cell">
+					<img
+						src="/src/assets/img/lcon-coin/icon-crypto/usdc-icon.png"
+						alt="image-USDC"
+						class="table-box__style-icons"
+					/>
+					<p class="table-box__style-nameCoin">USDC</p>
+				</div>
+			</td>
+			<td>
+				<p class="usdc-price">N/A</p>
+			</td>
 		</tr>
 
 		<tr>
@@ -103,22 +119,6 @@
 			</td>
 			<td>
 				<p class="solana-price">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table-box__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/usdc-icon.png"
-						alt="image-USDC"
-						class="table-box__style-icons"
-					/>
-					<p class="table-box__style-nameCoin">USDC</p>
-				</div>
-			</td>
-			<td>
-				<p class="usdc-price">N/A</p>
 			</td>
 		</tr>
 

@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
+import { slaiderDataApi } from '@/api/slider-api'
 // @ts-ignore
 import Swiper from 'swiper'
 // @ts-ignore
@@ -92,7 +93,7 @@ onMounted(() => {
 				<div class="swiper-slide">
 					<div class="crypto-card">
 						<h3>Solana</h3>
-						<p class="solana-slide">$3,420</p>
+						<p class="solana-slide"></p>
 						<span class="change">-1.1%</span>
 					</div>
 				</div>
