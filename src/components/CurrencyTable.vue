@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue'
+import { currencyApi } from '@/api/currency-api'
+</script>
+
 <template>
 	<table class="table-box__style">
 		<tr>
@@ -6,7 +10,7 @@
 				<p class="table-box__style-tittle">Currency</p>
 			</th>
 			<th>
-				<p class="table-box__style-tittle">Price</p>
+				<p class="table-box__style-tittle">Price (USD)</p>
 			</th>
 		</tr>
 
@@ -22,7 +26,7 @@
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="rub-price">N/A</p>
 			</td>
 		</tr>
 
@@ -34,11 +38,11 @@
 						alt="image-usd"
 						class="table-box__style-icons"
 					/>
-					<p class="table-box__style-nameCoin">United States dollar, (USD)</p>
+					<p class="table-box__style-nameCoin">Canadian dollar, (CAD)</p>
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="cad-price">N/A</p>
 			</td>
 		</tr>
 
@@ -54,7 +58,7 @@
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="eur-price">N/A</p>
 			</td>
 		</tr>
 
@@ -70,7 +74,7 @@
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="cny-price">N/A</p>
 			</td>
 		</tr>
 
@@ -86,7 +90,7 @@
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="gbp-price">N/A</p>
 			</td>
 		</tr>
 
@@ -102,7 +106,7 @@
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="jpy-price">N/A</p>
 			</td>
 		</tr>
 
@@ -118,7 +122,7 @@
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="chf-price">N/A</p>
 			</td>
 		</tr>
 
@@ -134,7 +138,7 @@
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="try-price">N/A</p>
 			</td>
 		</tr>
 
@@ -150,9 +154,9 @@
 				</div>
 			</td>
 			<td>
-				<p>N/A</p>
+				<p class="aed-price">N/A</p>
 			</td>
 		</tr>
 	</table>
 </template>
-<style scoped></style>
+<style></style>

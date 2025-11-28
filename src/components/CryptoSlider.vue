@@ -46,55 +46,58 @@ onMounted(() => {
 		<div class="swiper crypto-slider">
 			<!-- Обертка слайдов -->
 			<div class="swiper-wrapper">
-				<!-- Слайд 1 -->
 				<div class="swiper-slide">
 					<div class="crypto-card">
 						<h3>Bitcoin</h3>
 						<p class="btc-slider">N/A</p>
-						<span class="change">N/A</span>
+						<span class="btc-change">N/A</span>
 					</div>
 				</div>
+
 				<div class="swiper-slide">
 					<div class="crypto-card">
 						<h3>USDC</h3>
 						<p class="usdc-slide">N/A</p>
-						<span class="change">N/A</span>
+						<span class="usdc-change">N/A</span>
 					</div>
 				</div>
-				<!-- Слайд 2 -->
+
 				<div class="swiper-slide">
 					<div class="crypto-card">
 						<h3>Ethereum</h3>
 						<p class="eth-slider">N/A</p>
-						<span class="change">N/A</span>
+						<span class="eth-change">N/A</span>
 					</div>
 				</div>
+
 				<div class="swiper-slide">
 					<div class="crypto-card">
 						<h3>Tether</h3>
 						<p class="ttr-slider">N/A</p>
-						<span class="change">N/A</span>
+						<span class="ttr-change">N/A</span>
 					</div>
 				</div>
+
 				<div class="swiper-slide">
 					<div class="crypto-card">
 						<h3>XRP</h3>
 						<p class="xrp-slider">N/A</p>
-						<span class="change">N/A</span>
+						<span class="xrp-change">N/A</span>
 					</div>
 				</div>
+
 				<div class="swiper-slide">
 					<div class="crypto-card">
 						<h3>BNB</h3>
 						<p class="bnb-slider">N/A</p>
-						<span class="change">N/A</span>
+						<span class="bnb-change">N/A</span>
 					</div>
 				</div>
 				<div class="swiper-slide">
 					<div class="crypto-card">
 						<h3>Solana</h3>
-						<p class="solana-slide"></p>
-						<span class="change">-1.1%</span>
+						<p class="solana-slide">N/A</p>
+						<span class="solana-change">N/A</span>
 					</div>
 				</div>
 				<!-- Элементы управления -->

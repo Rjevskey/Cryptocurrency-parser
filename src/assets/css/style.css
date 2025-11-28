@@ -79,6 +79,45 @@ th {
 	background: var(--container-bg-color);
 }
 
+/************************CHANGE-START***************************/
+.btc-change.positive::before,
+.eth-change.positive::before,
+.ttr-change.positive::before,
+.xrp-change.positive::before,
+.bnb-change.positive::before,
+.solana-change.positive::before,
+.usdc-change.positive::before {
+	content: '▲';
+	color: var(--active-color);
+	margin-right: 5px;
+}
+
+.btc-change.negative::before,
+.eth-change.negative::before,
+.ttr-change.negative::before,
+.xrp-change.negative::before,
+.bnb-change.negative::before,
+.solana-change.negative::before,
+.usdc-change.negative::before {
+	content: '▼';
+	color: var(--hover-color);
+	margin-right: 5px;
+}
+
+.btc-change.neutral::before,
+.eth-change.neutral::before,
+.ttr-change.neutral::before,
+.xrp-change.neutral::before,
+.bnb-change.neutral::before,
+.solana-change.neutral::before,
+.usdc-change.neutral::before {
+	content: '—';
+	color: yellow;
+	margin-right: 5px;
+}
+
+/************************CHANGE-START***************************/
+
 /************************PAGINATION-START*************************/
 .swiper-pagination {
 	position: relative;
