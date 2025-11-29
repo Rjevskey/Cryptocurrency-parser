@@ -18,5 +18,3 @@ export function currencyApi() {
 			console.log('Ошибка загрузки данных валют:', error)
 		})
 }
-
-currencyApi()

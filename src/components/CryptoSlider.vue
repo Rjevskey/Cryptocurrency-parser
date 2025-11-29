@@ -7,6 +7,7 @@ import Swiper from 'swiper'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 
 onMounted(() => {
+	slaiderDataApi()
 	new Swiper('.crypto-slider', {
 		modules: [Navigation, Pagination, Autoplay],
 		loop: true,

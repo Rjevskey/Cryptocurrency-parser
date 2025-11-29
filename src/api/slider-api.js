@@ -92,6 +92,7 @@ export function slaiderDataApi() {
 				console.log('Solana не найдена в ответе на слайдер')
 			}
 		})
+		.catch((error) => {
+			console.log('Ошибка загрузки данных слайдера:', error)
+		})
 }
-
-slaiderDataApi()

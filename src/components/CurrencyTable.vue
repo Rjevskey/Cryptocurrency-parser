@@ -1,6 +1,10 @@
 <script setup>
 import { onMounted } from 'vue'
 import { currencyApi } from '@/api/currency-api'
+
+onMounted(() => {
+	currencyApi()
+})
 </script>
 
 <template>

@@ -286,9 +286,6 @@ th {
 		solid var(--border-color);
 }
 
-/* .main-container__header-box{
-} */
-
 .main-container__header {
 	display: flex;
 	gap: 20px;
