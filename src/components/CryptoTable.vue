@@ -1,156 +1,156 @@
 <script setup></script>
 <template>
-	<table class="table-box__style">
+	<table class="table">
 		<tr>
 			<th>
-				<p class="table-box__style-tittle">Currency</p>
+				<h4 class="table__title">Currency</h4>
 			</th>
 			<th>
-				<p class="table-box__style-tittle">Price (USD)</p>
+				<h4 class="table__title">Price (USD)</h4>
 			</th>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/usdc-icon.png"
 						alt="image-USDC"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">USDC</p>
+					<p class="table__nameCoin">USDC</p>
 				</div>
 			</td>
 			<td>
-				<p class="usdc-price">N/A</p>
+				<p class=".table__price--usdc">N/A</p>
 			</td>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/bitcoin-icon.png"
 						alt="image-bitcoin"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">Bitcoin</p>
+					<p class="table__nameCoin">Bitcoin</p>
 				</div>
 			</td>
 			<td>
-				<p class="btc-price">N/A</p>
+				<p class=".table__price--btc">N/A</p>
 			</td>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/ethereum-icon.png"
 						alt="image-ethereum"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">Ethereum</p>
+					<p class="table__nameCoin">Ethereum</p>
 				</div>
 			</td>
 			<td>
-				<p class="eth-price">N/A</p>
+				<p class=".table__price--eth">N/A</p>
 			</td>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/tether-icon.png"
 						alt="image-tether"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">Tether</p>
+					<p class="table__nameCoin">Tether</p>
 				</div>
 			</td>
 			<td>
-				<p class="ttr-price">N/A</p>
+				<p class=".table__price--ttr">N/A</p>
 			</td>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/xrp-icon.png"
 						alt="image-xrp"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">XRP</p>
+					<p class="table__nameCoin">XRP</p>
 				</div>
 			</td>
 			<td>
-				<p class="xrp-price">N/A</p>
+				<p class=".table__price--xrp">N/A</p>
 			</td>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/bnb-icon.png"
 						alt="image-bnb"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">BNB</p>
+					<p class="table__nameCoin">BNB</p>
 				</div>
 			</td>
 			<td>
-				<p class="bnb-price">N/A</p>
+				<p class=".table__price--bnb">N/A</p>
 			</td>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/solana-icon.png"
 						alt="image-solana"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">Solana</p>
+					<p class="table__nameCoin">Solana</p>
 				</div>
 			</td>
 			<td>
-				<p class="solana-price">N/A</p>
+				<p class=".table__price--solana">N/A</p>
 			</td>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/tron-icon.png"
 						alt="image-tron"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">TRON</p>
+					<p class="table__nameCoin">TRON</p>
 				</div>
 			</td>
 			<td>
-				<p class="tron-price">N/A</p>
+				<p class=".table__price--tron">N/A</p>
 			</td>
 		</tr>
 
 		<tr>
 			<td>
-				<div class="table-box__cell">
+				<div class="table__cell">
 					<img
 						src="/src/assets/img/lcon-coin/icon-crypto/dogicoin-icon.png"
 						alt="image-dogecoin"
-						class="table-box__style-icons"
+						class="table__icons"
 					/>
-					<p class="table-box__style-nameCoin">Dogecoin</p>
+					<p class="table__nameCoin">Dogecoin</p>
 				</div>
 			</td>
 			<td>
-				<p class="doge-price">N/A</p>
+				<p class=".table__price--doge">N/A</p>
 			</td>
 		</tr>
 	</table>

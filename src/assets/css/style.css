@@ -207,12 +207,12 @@ th {
 
 /************************HEADER-START***************************/
 
-.header-box {
+.header {
 	display: flex;
 	justify-content: space-between;
 }
 
-.logo-project {
+.header__logo-project {
 	width: 20%;
 	margin: 40px;
 
@@ -220,11 +220,11 @@ th {
 	align-items: center;
 }
 
-.logo-project__link {
+.header__logo-project__link {
 	display: inline-block;
 }
 
-.header__button-registration__box {
+.header__button-registration {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -232,7 +232,7 @@ th {
 	margin-top: 20px;
 }
 
-.button-registration-style {
+.header__button-registration__button {
 	width: 140px;
 	height: 40px;
 
@@ -243,17 +243,21 @@ th {
 	background: var(--container-bg-color);
 }
 
-.button-registration-style:hover {
+.header__button-registration__button:hover {
 	color: var(--hover-color);
 	transition: color 0.6s;
 }
 
-.button-registration-style:active {
+.header__button-registration__button:active {
 	color: var(--active-color);
 	transition: color 0.2s;
 }
 
-.navigation-container {
+/************************HEADER-END***************************/
+
+/************************NAV-START***************************/
+
+.navigation {
 	margin: 10px 40px;
 
 	border:
@@ -263,60 +267,46 @@ th {
 	display: flex;
 	justify-content: center;
 }
-
-.main-tittle {
+.tittle {
 	align-items: center;
 }
 
-/************************HEADER-ENDT***************************/
+/************************NAV-END***************************/
 
 /************************MAIN-START***************************/
 
-.main-container {
+.main {
 	width: 100%;
-
 	display: flex;
 }
 
-.main-container__table-box {
+.tables-container {
 	display: flex;
 	width: 100%;
-	border:
-		1px,
-		solid var(--border-color);
+	border: 1px solid var(--border-color);
 }
 
-.main-container__header {
-	display: flex;
-	gap: 20px;
-
-	padding: 10px;
-	width: 30%;
-	border:
-		1px,
-		solid var(--border-color);
-}
-
-.table-box__style {
+.table {
 	width: 50%;
 	margin: 15px 10px;
-
-	white-space: nowrap;
-	text-align: center;
-
 	border-collapse: collapse;
 	border: 1px solid var(--border-color);
 }
-.table-box__cell {
-	display: flex;
-}
-.table-box__style-nameCoin {
-	width: 50%;
-	text-align: left;
-	/* padding: 2px 10px; */
+
+.table__title {
+	text-align: center;
 }
 
-.table-box__style-icons {
+.table__cell {
+	display: flex;
+}
+
+.table__nameCoin {
+	width: 50%;
+	text-align: left;
+}
+
+.table__icons {
 	width: 24px;
 	height: 24px;
 }
@@ -324,7 +314,7 @@ th {
 
 /************************FOOTER-START***************************/
 
-.footer-box {
+.footer {
 	margin: 10px 40px;
 	margin-top: 40px;
 
@@ -335,28 +325,28 @@ th {
 	background-color: var(--container-bg-color);
 }
 
-.footer-box__my-contacts {
+.footer__contacts {
 	display: flex;
 	justify-content: center;
 }
 
-.footer-box__text-project-style {
+.footer__description {
 	font-family: PressStart-Regular;
 	font-size: 10px;
 }
 /************************FOOTER-CONTACTS START***************************/
 
-.footer-box__my-contacts {
+.footer__contacts {
 	margin-top: 25px;
 }
 
-.footer-box__my-contacts-telegram {
+.footer__contacts-telegram {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.footer-box__my-contacts-telegram a {
+.footer__telegram-link a {
 	font-family: PressStart-Regular;
 	font-size: 10px;
 	color: var(--text-color);
@@ -364,18 +354,18 @@ th {
 	transition: color 0.3s;
 }
 
-.footer-box__my-contacts-telegram a:hover {
+.footer__telegram-linka:hover {
 	color: var(--hover-color);
 }
 
-.footer-box__my-contacts-telegram a:active {
+.footer__telegram-link a:active {
 	color: var(--active-color);
 }
 
-.footer-box__my-contacts-telegram a:visited {
+.footer__telegram-link a:visited {
 	color: darkolivegreen !important;
 }
 
-/************************FOOTER-CONTACTS START*****************/
+/************************FOOTER-CONTACTS END*****************/
 
 /************************FOOTER-END***************************/

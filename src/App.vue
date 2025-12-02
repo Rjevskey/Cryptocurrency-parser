@@ -11,13 +11,13 @@ import HeaderTables from './components/HeaderTables.vue'
 	<div class="general-container">
 		<HeaderComponent />
 		<HeaderTables />
-		<div class="main-container">
-			<div class="main-container__table-box">
+		<div class="main">
+			<div class="tables-container">
 				<CryptoTable />
 				<CurrencyTable />
 			</div>
 		</div>
-		<div class="slider-container">
+		<div class="slider">
 			<CryptoSlider />
 		</div>
 		<FooterComponent />

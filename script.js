@@ -5,46 +5,46 @@
 //         .then(data => {
 //             // Криво обновляем все цены
 //             if (data.bitcoin) {
-//                 document.querySelector('.btc-price').textContent = '$' + data.bitcoin.usd;
+//                 document.querySelector('..table__price--btc').textContent = '$' + data.bitcoin.usd;
 //                 document.querySelector('.btc-slider').textContent = '$' + data.bitcoin.usd;
 //             }
 
 //             if (data.ethereum) {
-//                 document.querySelector('.eth-price').textContent = '$' + data.ethereum.usd;
+//                 document.querySelector('..table__price--eth').textContent = '$' + data.ethereum.usd;
 //                 document.querySelector('.eth-slider').textContent = '$' + data.ethereum.usd;
 //             }
 
 //             if (data.tether) {
-//                 document.querySelector('.ttr-price').textContent = '$' + data.tether.usd;
+//                 document.querySelector('..table__price--ttr').textContent = '$' + data.tether.usd;
 //                 document.querySelector('.ttr-slider').textContent = '$' + data.tether.usd;
 //             }
 
 //             if (data.ripple) {
-//                 document.querySelector('.xrp-price').textContent = '$' + data.ripple.usd;
+//                 document.querySelector('..table__price--xrp').textContent = '$' + data.ripple.usd;
 //                 document.querySelector('.xrp-slider').textContent = '$' + data.ripple.usd;
 //             }
 
 //             if (data.binancecoin) {
-//                 document.querySelector('.bnb-price').textContent = '$' + data.binancecoin.usd;
+//                 document.querySelector('..table__price--bnb').textContent = '$' + data.binancecoin.usd;
 //                 document.querySelector('.bnb-slider').textContent = '$' + data.binancecoin.usd;
 //             }
 
 //             if (data.solana) {
-//                 document.querySelector('.solana-price').textContent = '$' + data.solana.usd;
+//                 document.querySelector('..table__price--solana').textContent = '$' + data.solana.usd;
 //                 document.querySelector('.solana-slide').textContent = '$' + data.solana.usd;
 //             }
 
 //             if (data['usd-coin']) {
-//                 document.querySelector('.usdc-price').textContent = '$' + data['usd-coin'].usd;
+//                 document.querySelector('..table__price--usdc').textContent = '$' + data['usd-coin'].usd;
 //                 document.querySelector('.usdc-slide').textContent = '$' + data['usd-coin'].usd;
 //             }
 
 //             if (data.tron) {
-//                 document.querySelector('.tron-price').textContent = '$' + data.tron.usd;
+//                 document.querySelector('..table__price--tron').textContent = '$' + data.tron.usd;
 //             }
 
 //             if (data.dogecoin) {
-//                 document.querySelector('.doge-price').textContent = '$' + data.dogecoin.usd;
+//                 document.querySelector('..table__price--doge').textContent = '$' + data.dogecoin.usd;
 //             }
 //         })
 //         .catch(err => {
