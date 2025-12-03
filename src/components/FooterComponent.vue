@@ -14,7 +14,7 @@
 			<img
 				src="/src/assets/img/footer-icon/telegram-icon.png"
 				alt=""
-				class="my-contacts-icon"
+				class="footer__contacts-icon"
 				style="color: inherit !important"
 			/>
 

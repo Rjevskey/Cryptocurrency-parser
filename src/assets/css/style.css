@@ -325,11 +325,6 @@ th {
 	background-color: var(--container-bg-color);
 }
 
-.footer__contacts {
-	display: flex;
-	justify-content: center;
-}
-
 .footer__description {
 	font-family: PressStart-Regular;
 	font-size: 10px;
@@ -338,15 +333,13 @@ th {
 
 .footer__contacts {
 	margin-top: 25px;
-}
 
-.footer__contacts-telegram {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.footer__telegram-link a {
+.footer__telegram-link {
 	font-family: PressStart-Regular;
 	font-size: 10px;
 	color: var(--text-color);
@@ -354,15 +347,15 @@ th {
 	transition: color 0.3s;
 }
 
-.footer__telegram-linka:hover {
+.footer__telegram-link:hover {
 	color: var(--hover-color);
 }
 
-.footer__telegram-link a:active {
+.footer__telegram-link:active {
 	color: var(--active-color);
 }
 
-.footer__telegram-link a:visited {
+.footer__telegram-link:visited {
 	color: darkolivegreen !important;
 }
 
