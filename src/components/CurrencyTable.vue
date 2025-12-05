@@ -3,8 +3,12 @@ import { ref } from 'vue'
 import { onMounted } from 'vue'
 import { currencyApi } from '@/api/currency-api'
 
+const savedCurrency = ref({})
+
 onMounted(() => {
-	let dataPackage = currencyApi()
+	currencyApi().then((apiData) => {
+		savedCurrency.value = apiData
+	})
 })
 
 const currencies = ref([
@@ -62,12 +66,12 @@ const currencies = ref([
 		<tr v-for="currency in currencies" :key="currency.code">
 			<td>
 				<div class="table__cell">
-					<img :src="currency.icon" alt="image-rub" class="table__icons" />
+					<img :src="currency.icon" class="table__icons" />
 					<p class="table__nameCoin">{{ currency.name }}</p>
 				</div>
 			</td>
 			<td>
-				<p class="table__price--rub">N/A</p>
+				<p class="table__price--rub">{{ savedCurrency[currency.code] }}</p>
 			</td>
 		</tr>
 	</table>

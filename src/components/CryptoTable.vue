@@ -1,4 +1,36 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import { onMounted } from 'vue'
+import { requestApi } from '@/api/crypto-api'
+
+const cryptoSaved = ref({})
+
+onMounted(() => {
+	requestApi().then((apiData) => {
+		cryptoSaved.value = apiData
+	})
+})
+
+const crypto = ref([
+	{ id: 'usd-coin', name: 'USDC', icon: '/src/assets/img/lcon-coin/icon-crypto/usdc-icon.png' },
+	{
+		id: 'bitcoin',
+		name: 'Bitcoin',
+		icon: '/src/assets/img/lcon-coin/icon-crypto/bitcoin-icon.png',
+	},
+	{
+		id: 'ethereum',
+		name: 'Ethereum',
+		icon: '/src/assets/img/lcon-coin/icon-crypto/ethereum-icon.png',
+	},
+	{ id: 'tether', name: 'Tether', icon: '/src/assets/img/lcon-coin/icon-crypto/tether-icon.png' },
+	{ id: 'ripple', name: 'XRP', icon: '/src/assets/img/lcon-coin/icon-crypto/xrp-icon.png' },
+	{ id: 'binancecoin', name: 'BNB', icon: '/src/assets/img/lcon-coin/icon-crypto/bnb-icon.png' },
+	{ id: 'solana', name: 'Solana', icon: '/src/assets/img/lcon-coin/icon-crypto/solana-icon.png' },
+	{ id: 'tron', name: 'Tron', icon: '/src/assets/img/lcon-coin/icon-crypto/tron-icon.png' },
+	{ id: 'dogecoin', name: 'Dogecoin', icon: '/img/lcon-coin/icon-crypto/dogicoin-icon.png' },
+])
+</script>
 <template>
 	<table class="table">
 		<tr>
@@ -10,147 +42,15 @@
 			</th>
 		</tr>
 
-		<tr>
+		<tr v-for="value in crypto" :key="value.id">
 			<td>
 				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/usdc-icon.png"
-						alt="image-USDC"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">USDC</p>
+					<img :src="value.icon" class="table__icons" />
+					<p class="table__nameCoin">{{ value.name }}</p>
 				</div>
 			</td>
 			<td>
-				<p class=".table__price--usdc">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/bitcoin-icon.png"
-						alt="image-bitcoin"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">Bitcoin</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--btc">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/ethereum-icon.png"
-						alt="image-ethereum"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">Ethereum</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--eth">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/tether-icon.png"
-						alt="image-tether"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">Tether</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--ttr">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/xrp-icon.png"
-						alt="image-xrp"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">XRP</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--xrp">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/bnb-icon.png"
-						alt="image-bnb"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">BNB</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--bnb">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/solana-icon.png"
-						alt="image-solana"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">Solana</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--solana">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/tron-icon.png"
-						alt="image-tron"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">TRON</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--tron">N/A</p>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<div class="table__cell">
-					<img
-						src="/src/assets/img/lcon-coin/icon-crypto/dogicoin-icon.png"
-						alt="image-dogecoin"
-						class="table__icons"
-					/>
-					<p class="table__nameCoin">Dogecoin</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--doge">N/A</p>
+				<p class=".table__price--usdc">{{ cryptoSaved[value.id]?.usd }}</p>
 			</td>
 		</tr>
 	</table>

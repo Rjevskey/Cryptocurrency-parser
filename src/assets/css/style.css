@@ -62,23 +62,63 @@ th {
 }
 
 /************************SLAIDER-START***************************/
-.crypto-card {
-	text-align: center;
-}
+/************************SLAIDER-START***************************/
 .swiper-slide {
 	margin-top: 30px;
-	padding: 10px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	border:
-		2px,
-		solid var(--border-color);
-	background: var(--container-bg-color);
 }
 
+.crypto-card {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px;
+	border: 2px solid var(--border-color);
+	background: var(--container-bg-color);
+	border-radius: 8px;
+	min-height: 60px;
+}
+
+.crypto-card img {
+	width: 28px;
+	height: 28px;
+	flex-shrink: 0;
+}
+
+.crypto-card-content {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.crypto-card h3 {
+	font-size: 14px;
+	margin: 0;
+	font-weight: normal;
+}
+
+.crypto-card p {
+	font-size: 12px;
+	margin: 0;
+	color: var(--text-color);
+}
+
+.crypto-card span {
+	font-size: 11px;
+	margin: 0;
+}
+
+.crypto-card span.positive {
+	color: var(--active-color);
+}
+
+.crypto-card span.negative {
+	color: var(--hover-color);
+}
+
+.crypto-card span.neutral {
+	color: yellow;
+}
+/************************SLAIDER-END***************************/
 /************************CHANGE-START***************************/
 .btc-change.positive::before,
 .eth-change.positive::before,
