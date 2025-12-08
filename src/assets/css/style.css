@@ -62,101 +62,101 @@ th {
 }
 
 /************************SLAIDER-START***************************/
-/************************SLAIDER-START***************************/
 .swiper-slide {
 	margin-top: 30px;
 }
 
 .crypto-card {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	gap: 12px;
-	padding: 12px;
+
+	padding: 15px;
 	border: 2px solid var(--border-color);
 	background: var(--container-bg-color);
 	border-radius: 8px;
-	min-height: 60px;
+	text-align: center;
+	min-height: 120px;
+	justify-content: center;
 }
 
-.crypto-card img {
-	width: 28px;
-	height: 28px;
+.crypto-card__header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	margin-bottom: 1px;
+}
+
+.crypto-card__icon {
+	width: 24px;
+	height: 24px;
+
 	flex-shrink: 0;
 }
 
-.crypto-card-content {
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
-}
-
-.crypto-card h3 {
-	font-size: 14px;
+.crypto-card__title {
+	font-size: 16px;
 	margin: 0;
 	font-weight: normal;
 }
 
-.crypto-card p {
-	font-size: 12px;
+.crypto-card__content {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.crypto-card__price {
+	font-size: 18px;
+	font-weight: bold;
 	margin: 0;
 	color: var(--text-color);
 }
 
-.crypto-card span {
-	font-size: 11px;
-	margin: 0;
+.crypto-card__change {
+	font-size: 14px;
 }
 
-.crypto-card span.positive {
+.crypto-card__change.positive {
 	color: var(--active-color);
 }
 
-.crypto-card span.negative {
+.crypto-card__change.negative {
 	color: var(--hover-color);
 }
 
-.crypto-card span.neutral {
+.crypto-card__change.neutral {
 	color: yellow;
 }
 /************************SLAIDER-END***************************/
 /************************CHANGE-START***************************/
-.btc-change.positive::before,
-.eth-change.positive::before,
-.ttr-change.positive::before,
-.xrp-change.positive::before,
-.bnb-change.positive::before,
-.solana-change.positive::before,
-.usdc-change.positive::before {
+.crypto-card__change::before {
+	display: none;
+}
+
+.crypto-card__change.positive::before,
+.crypto-card__change.negative::before,
+.crypto-card__change.neutral::before {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.crypto-card__change.positive::before {
 	content: '▲';
 	color: var(--active-color);
-	margin-right: 5px;
 }
 
-.btc-change.negative::before,
-.eth-change.negative::before,
-.ttr-change.negative::before,
-.xrp-change.negative::before,
-.bnb-change.negative::before,
-.solana-change.negative::before,
-.usdc-change.negative::before {
+.crypto-card__change.negative::before {
 	content: '▼';
 	color: var(--hover-color);
-	margin-right: 5px;
 }
 
-.btc-change.neutral::before,
-.eth-change.neutral::before,
-.ttr-change.neutral::before,
-.xrp-change.neutral::before,
-.bnb-change.neutral::before,
-.solana-change.neutral::before,
-.usdc-change.neutral::before {
+.crypto-card__change.neutral::before {
 	content: '—';
 	color: yellow;
-	margin-right: 5px;
 }
-
-/************************CHANGE-START***************************/
+/************************CHANGE-END***************************/
 
 /************************PAGINATION-START*************************/
 .swiper-pagination {
@@ -240,12 +240,59 @@ th {
 	color: var(--active-color);
 	transition: color 0.6s;
 }
-.header__modal-input-style {
+.modal-input {
 	margin-bottom: 10px;
 }
 /************************MODAL_WINDOWS_REG-END***************************/
 
+/************************BUTTON-START***************************/
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 20px;
+}
+
+.button {
+	width: 140px;
+	height: 40px;
+
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+
+	color: var(--text-color);
+	background: var(--container-bg-color);
+}
+
+.button:hover {
+	color: var(--hover-color);
+	transition: color 0.6s;
+}
+
+.button:active {
+	color: var(--active-color);
+	transition: color 0.2s;
+}
+/************************BUTTON-END***************************/
+
 /************************HEADER-START***************************/
+
+/************************NAV-START***************************/
+.navigation {
+	margin: 10px 40px;
+
+	border:
+		1px,
+		solid var(--border-color);
+
+	display: flex;
+	justify-content: center;
+}
+.tittle {
+	align-items: center;
+}
+/************************NAV-END***************************/
 
 .header {
 	display: flex;
@@ -263,58 +310,9 @@ th {
 .header__logo-project__link {
 	display: inline-block;
 }
-
-.header__button-registration {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	margin-top: 20px;
-}
-
-.header__button-registration__button {
-	width: 140px;
-	height: 40px;
-
-	border: 1px solid var(--border-color);
-	border-radius: 10px;
-
-	color: var(--text-color);
-	background: var(--container-bg-color);
-}
-
-.header__button-registration__button:hover {
-	color: var(--hover-color);
-	transition: color 0.6s;
-}
-
-.header__button-registration__button:active {
-	color: var(--active-color);
-	transition: color 0.2s;
-}
-
 /************************HEADER-END***************************/
 
-/************************NAV-START***************************/
-
-.navigation {
-	margin: 10px 40px;
-
-	border:
-		1px,
-		solid var(--border-color);
-
-	display: flex;
-	justify-content: center;
-}
-.tittle {
-	align-items: center;
-}
-
-/************************NAV-END***************************/
-
 /************************MAIN-START***************************/
-
 .main {
 	width: 100%;
 	display: flex;
@@ -353,7 +351,6 @@ th {
 /************************MAIN-END***************************/
 
 /************************FOOTER-START***************************/
-
 .footer {
 	margin: 10px 40px;
 	margin-top: 40px;
