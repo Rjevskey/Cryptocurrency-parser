@@ -3,14 +3,25 @@ import { ref } from 'vue'
 import ModalComponent from './ModalComponent.vue'
 import ButtonComponent from './ButtonComponent.vue'
 
+const demoUser = {
+	name: 'Test User',
+	email: 'test.user@crypto.eye',
+}
 const isModalOpen = ref(false)
+const isModalDemoOpen = ref(false)
 
 function openModal() {
 	isModalOpen.value = true
 }
+function openDemoModal() {
+	isModalDemoOpen.value = true
+}
 
 function closeModal() {
 	isModalOpen.value = false
+}
+function closeDemoModal() {
+	isModalDemoOpen.value = false
 }
 </script>
 
@@ -31,7 +42,7 @@ function closeModal() {
 			</div>
 		</div>
 		<div class="button-container">
-			<ButtonComponent text="Demo login" />
+			<ButtonComponent text="Demo login" @click="openDemoModal" />
 			<ButtonComponent text="Registration" @click="openModal" />
 		</div>
 	</header>
@@ -43,6 +54,32 @@ function closeModal() {
 		</div>
 	</nav>
 	<ModalComponent :isOpen="isModalOpen" title="Registration" @close="closeModal" />
+	<ModalComponent :isOpen="isModalDemoOpen" title="Demo Login" @close="closeDemoModal">
+		<form>
+			<input
+				:value="demoUser.name"
+				type="text"
+				placeholder="Name"
+				class="modal-input"
+				readonly
+			/>
+			<input
+				:value="demoUser.email"
+				type="email"
+				placeholder="Email"
+				class="modal-input"
+				readonly
+			/>
+			<button
+				type="submit"
+				class="button"
+				id="button-modal___reg"
+				@click="$emit('demo-login')"
+			>
+				Demo Login
+			</button>
+		</form>
+	</ModalComponent>
 </template>
 
 <style></style>
