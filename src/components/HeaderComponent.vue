@@ -29,7 +29,7 @@ function closeDemoModal() {
 	<header class="header">
 		<div class="header__logo-project">
 			<div class="logo-project__tittle-project">
-				<a href="/index.html" class="logo-project__link">
+				<a href="/" class="logo-project__link">
 					<img
 						src="@/assets/img/logo-project/logo/logo-red-eye.png"
 						alt="logo-eye"
