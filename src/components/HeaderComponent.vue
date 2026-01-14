@@ -1,7 +1,10 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import ModalComponent from './ModalComponent.vue'
 import ButtonComponent from './ButtonComponent.vue'
+
+const router = useRouter()
 
 const demoUser = {
 	name: 'Test User',
@@ -22,6 +25,12 @@ function closeModal() {
 }
 function closeDemoModal() {
 	isModalDemoOpen.value = false
+}
+
+function goToDashboard() {
+	closeDemoModal()
+	router.push('/dashboard')
+	console.log('Тык, LoginDemo ')
 }
 </script>
 
@@ -54,7 +63,12 @@ function closeDemoModal() {
 		</div>
 	</nav>
 	<ModalComponent :isOpen="isModalOpen" title="Registration" @close="closeModal" />
-	<ModalComponent :isOpen="isModalDemoOpen" title="Demo Login" @close="closeDemoModal">
+	<ModalComponent
+		:isOpen="isModalDemoOpen"
+		title="Demo Login"
+		@close="closeDemoModal"
+		@demo-login="goToDashboard"
+	>
 		<form>
 			<input
 				:value="demoUser.name"
