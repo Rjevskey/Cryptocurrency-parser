@@ -69,30 +69,17 @@ function goToDashboard() {
 		@close="closeDemoModal"
 		@demo-login="goToDashboard"
 	>
-		<form>
-			<input
-				:value="demoUser.name"
-				type="text"
-				placeholder="Name"
-				class="modal-input"
-				readonly
-			/>
-			<input
-				:value="demoUser.email"
-				type="email"
-				placeholder="Email"
-				class="modal-input"
-				readonly
-			/>
-			<button
-				type="submit"
-				class="button"
-				id="button-modal___reg"
-				@click="$emit('demo-login')"
-			>
-				Demo Login
-			</button>
-		</form>
+		<input :value="demoUser.name" type="text" placeholder="Name" class="modal-input" readonly />
+		<input
+			:value="demoUser.email"
+			type="email"
+			placeholder="Email"
+			class="modal-input"
+			readonly
+		/>
+		<button type="button" class="button" id="button-modal___reg" @click="$emit('demo-login')">
+			Demo Login
+		</button>
 	</ModalComponent>
 </template>
 
