@@ -30,7 +30,6 @@ function closeDemoModal() {
 function goToDashboard() {
 	closeDemoModal()
 	router.push('/dashboard')
-	console.log('Тык, LoginDemo ')
 }
 </script>
 
@@ -63,12 +62,7 @@ function goToDashboard() {
 		</div>
 	</nav>
 	<ModalComponent :isOpen="isModalOpen" title="Registration" @close="closeModal" />
-	<ModalComponent
-		:isOpen="isModalDemoOpen"
-		title="Demo Login"
-		@close="closeDemoModal"
-		@demo-login="goToDashboard"
-	>
+	<ModalComponent :isOpen="isModalDemoOpen" title="Demo Login" @close="closeDemoModal">
 		<input :value="demoUser.name" type="text" placeholder="Name" class="modal-input" readonly />
 		<input
 			:value="demoUser.email"
@@ -77,7 +71,7 @@ function goToDashboard() {
 			class="modal-input"
 			readonly
 		/>
-		<button type="button" class="button" id="button-modal___reg" @click="$emit('demo-login')">
+		<button type="button" class="button" id="button-modal___reg" @click="goToDashboard">
 			Demo Login
 		</button>
 	</ModalComponent>
