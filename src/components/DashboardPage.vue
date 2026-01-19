@@ -1,5 +1,10 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue'
+import WelcomeBanner from '@/components/WelcomeBanner.vue'
+</script>
 
-<template></template>
+<template>
+	<WelcomeBanner />
+</template>
 
 <style></style>

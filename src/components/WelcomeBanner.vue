@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import DashboardPage from './DashboardPage.vue'
 </script>
 
 <template>
