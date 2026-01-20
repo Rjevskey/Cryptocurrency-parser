@@ -196,7 +196,6 @@ th {
 /************************HEADER-ENDT***************************/
 /************************WELCOMEBANNER-START******************/
 .welcomeBanner {
-	background: red !important;
 	width: 200px;
 	height: 150px;
 
@@ -209,7 +208,7 @@ th {
 	display: flex;
 	justify-content: center;
 }
-/************************WELCOMEBANNER-START*****************/
+/************************WELCOMEBANNER-END*****************/
 /************************MAIN-START*************************/
 
 .main-container {
