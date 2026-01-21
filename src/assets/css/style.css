@@ -322,6 +322,43 @@ th {
 	display: inline-block;
 }
 /************************HEADER-END***************************/
+/************************WELCOMEBANNER-START******************/
+.welcomeBanner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.welcomeBanner__border {
+	width: 650px;
+	height: 80px;
+
+	display: flex;
+	align-items: center;
+	gap: 100px;
+
+	padding: 5px;
+
+	border: 1px solid green;
+	border-radius: 10px;
+}
+
+.welcomeBanner__avatar {
+	width: 60px;
+	height: 60px;
+
+	border: 1px solid green;
+	border-radius: 10px;
+}
+
+.welcomeBanner__avatar--img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 50%;
+}
+/************************WELCOMEBANNER-END*****************/
 
 /************************MAIN-START***************************/
 .main {
