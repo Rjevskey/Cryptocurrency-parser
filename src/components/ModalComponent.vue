@@ -1,4 +1,5 @@
 <script setup>
+import CloseButton from './CloseButton.vue'
 defineProps({
 	isOpen: Boolean,
 	title: String,
@@ -9,7 +10,7 @@ defineEmits(['close', 'demo-login'])
 <template>
 	<div id="myModalReg" class="header__modal-windows" v-if="isOpen" @click="$emit('close')">
 		<div class="header__modal-windows___content" @click.stop>
-			<span class="header__modal-windows__close" @click="$emit('close')">&times;</span>
+			<CloseButton @close="$emit('close')" />
 			<h2>{{ title }}</h2>
 			<slot>
 				<form>

@@ -30,6 +30,8 @@ body {
 }
 
 .general-container {
+	position: relative;
+
 	margin: 10px 40px;
 	min-height: 100vh;
 
@@ -195,9 +197,29 @@ th {
 .swiper-button-next .swiper-navigation-icon {
 	display: none !important;
 }
-/************************PAGINATION-END***************************/
+/************************PAGINATION-END********************************/
 
-/************************SLAIDER-END***************************/
+/************************SLAIDER-END***********************************/
+
+/**************************CLOSE-BUTTON-START*************************/
+.close-button {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.close-button:hover {
+	color: var(--hover-color);
+	transition: color 0.6s;
+}
+
+.close-button:active {
+	color: var(--active-color);
+	transition: color 0.6s;
+}
+/**************************CLOSE-BUTTON-END*********************************/
 
 /**************************MODAL_WINDOWS_REG-START*************************/
 .header__modal-windows {
@@ -224,23 +246,6 @@ th {
 	position: relative;
 }
 
-.header__modal-windows__close {
-	position: absolute;
-	top: 10px;
-	right: 15px;
-	font-size: 24px;
-	cursor: pointer;
-}
-
-.header__modal-windows__close:hover {
-	color: var(--hover-color);
-	transition: color 0.6s;
-}
-
-.header__modal-windows__close:active {
-	color: var(--active-color);
-	transition: color 0.6s;
-}
 .modal-input {
 	margin-bottom: 10px;
 
@@ -328,6 +333,13 @@ th {
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+	z-index: 1000;
 }
 
 .welcomeBanner__border {
@@ -342,6 +354,8 @@ th {
 
 	border: 1px solid green;
 	border-radius: 10px;
+
+	position: relative;
 }
 
 .welcomeBanner__avatar {
@@ -358,6 +372,32 @@ th {
 	object-fit: contain;
 	border-radius: 50%;
 }
+
+/************************WELCOMEBANNER-ANIMATION-START*****************/
+.banner-enter-from {
+	transform: translate(-50%, -100%);
+	opacity: 0;
+}
+
+.banner-enter-active {
+	transition: all 0.5s ease-out;
+}
+
+.banner-leave-to {
+	transform: translate(-50%, -100%);
+	opacity: 0;
+}
+
+.banner-leave-active {
+	transition: all 0.5s ease-out;
+}
+
+.banner-enter-to {
+	transform: translate(-50%, 0);
+	opacity: 1;
+}
+/************************WELCOMEBANNER-ANIMATION-END******************/
+
 /************************WELCOMEBANNER-END*****************/
 
 /************************MAIN-START***************************/
