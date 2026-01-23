@@ -1,18 +1,29 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import WelcomeBanner from '@/components/WelcomeBanner.vue'
+
+const showBanner = ref(false)
+
 onMounted(() => {
 	setTimeout(() => {
 		showBanner.value = true
 	}, 1000)
+
+	setTimeout(() => {
+		if (showBanner.value) {
+			showBanner.value = false
+		}
+	}, 6000) // 1000 + 5000
 })
 
-const showBanner = ref()
+function hideBanner() {
+	showBanner.value = false
+}
 </script>
 
 <template>
 	<Transition name="banner">
-		<WelcomeBanner v-if="showBanner" @close="showBanner.value = false" />
+		<WelcomeBanner v-show="showBanner" @close="hideBanner" />
 	</Transition>
 </template>
 

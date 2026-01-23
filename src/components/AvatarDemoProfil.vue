@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue'
 <template>
 	<div class="welcomeBanner__avatar">
 		<img
-			src="/img/banner-img/avatar-dog-byStolypin.png"
+			src="/img/avatar-demo/avatar-demo__byDEZ.jpg"
 			alt=""
 			class="welcomeBanner__avatar--img"
 		/>

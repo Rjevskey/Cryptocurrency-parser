@@ -374,27 +374,21 @@ th {
 }
 
 /************************WELCOMEBANNER-ANIMATION-START*****************/
-.banner-enter-from {
-	transform: translate(-50%, -100%);
-	opacity: 0;
-}
-
-.banner-enter-active {
-	transition: all 0.5s ease-out;
-}
-
+.banner-enter-from,
 .banner-leave-to {
 	transform: translate(-50%, -100%);
 	opacity: 0;
 }
 
-.banner-leave-active {
-	transition: all 0.5s ease-out;
-}
-
-.banner-enter-to {
+.banner-enter-to,
+.banner-leave-from {
 	transform: translate(-50%, 0);
 	opacity: 1;
+}
+
+.banner-enter-active,
+.banner-leave-active {
+	transition: all 0.5s ease-out;
 }
 /************************WELCOMEBANNER-ANIMATION-END******************/
 

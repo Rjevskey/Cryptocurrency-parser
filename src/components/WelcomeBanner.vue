@@ -2,6 +2,8 @@
 import { ref, onMounted } from 'vue'
 import AvatarDemoProfil from './AvatarDemoProfil.vue'
 import CloseButton from './CloseButton.vue'
+
+defineEmits(['close'])
 </script>
 
 <template>
