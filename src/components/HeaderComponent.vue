@@ -54,13 +54,6 @@ function goToDashboard() {
 			<ButtonComponent text="Registration" @click="openModal" />
 		</div>
 	</header>
-	<nav>
-		<div class="navigation">
-			<div class="navigation__title">
-				<h1>Current rate for today</h1>
-			</div>
-		</div>
-	</nav>
 	<ModalComponent :isOpen="isModalOpen" title="Registration" @close="closeModal" />
 	<ModalComponent :isOpen="isModalDemoOpen" title="Demo Login" @close="closeDemoModal">
 		<input :value="demoUser.name" type="text" placeholder="Name" class="modal-input" readonly />
