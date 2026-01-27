@@ -1,13 +1,7 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-</script>
+<script setup></script>
 <template>
-	<div class="welcomeBanner__avatar">
-		<img
-			src="/img/avatar-demo/avatar-demo__byDEZ.jpg"
-			alt=""
-			class="welcomeBanner__avatar--img"
-		/>
+	<div class="banner__icon">
+		<img src="/img/avatar-demo/avatar-demo__byDEZ.jpg" alt="" class="banner__icon--img" />
 	</div>
 </template>
 

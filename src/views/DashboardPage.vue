@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import WelcomeBanner from '@/components/WelcomeBanner.vue'
-
+import InformBanner from '@/components/InformBanner.vue'
+import AvatarDemoProfil from '@/components/AvatarDemoProfil.vue'
 const showBanner = ref(false)
 
 onMounted(() => {
@@ -13,7 +13,7 @@ onMounted(() => {
 		if (showBanner.value) {
 			showBanner.value = false
 		}
-	}, 6000) // 1000 + 5000
+	}, 6000)
 })
 
 function hideBanner() {
@@ -23,7 +23,12 @@ function hideBanner() {
 
 <template>
 	<Transition name="banner">
-		<WelcomeBanner v-show="showBanner" @close="hideBanner" />
+		<InformBanner v-show="showBanner" @close="hideBanner">
+			<template #icon-banner>
+				<AvatarDemoProfil />
+			</template>
+			<template #text-banner><h3>WELCOME BACK, TEST USER</h3> </template>
+		</InformBanner>
 	</Transition>
 </template>
 
