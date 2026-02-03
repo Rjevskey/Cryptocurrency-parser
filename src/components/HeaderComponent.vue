@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import ModalComponent from './ModalComponent.vue'
 import ButtonComponent from './ButtonComponent.vue'
-
+import AvatarDemoProfil from './AvatarDemoProfil.vue'
 const router = useRouter()
 
 const demoUser = {
@@ -50,6 +50,7 @@ function goToDashboard() {
 			</div>
 		</div>
 		<div class="button-container">
+			<AvatarDemoProfil />
 			<ButtonComponent text="Demo login" @click="openDemoModal" />
 			<ButtonComponent text="Registration" @click="openModal" />
 		</div>
