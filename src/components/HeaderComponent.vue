@@ -3,9 +3,11 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import ModalComponent from './ModalComponent.vue'
 import ButtonComponent from './ButtonComponent.vue'
+import { useAuthStore } from '@/stores/authStore'
 import AvatarDemoProfil from './AvatarDemoProfil.vue'
-const router = useRouter()
 
+const router = useRouter()
+const authStore = useAuthStore()
 const demoUser = {
 	name: 'Test User',
 	email: 'test.user@crypto.eye',
@@ -50,7 +52,6 @@ function goToDashboard() {
 			</div>
 		</div>
 		<div class="button-container">
-			<AvatarDemoProfil />
 			<ButtonComponent text="Demo login" @click="openDemoModal" />
 			<ButtonComponent text="Registration" @click="openModal" />
 		</div>
