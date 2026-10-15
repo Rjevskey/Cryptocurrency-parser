@@ -1,4 +1,5 @@
 <script setup>
+<script setup>
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 import { requestApi } from '@/api/crypto-api'
@@ -31,28 +32,34 @@ const crypto = ref([
 	{ id: 'dogecoin', name: 'Dogecoin', icon: '/img/lcon-coin/icon-crypto/dogicoin-icon.png' },
 ])
 </script>
+
 <template>
 	<table class="table">
-		<tr>
-			<th>
-				<h4 class="table__title">Currency</h4>
-			</th>
-			<th>
-				<h4 class="table__title">Price (USD)</h4>
-			</th>
-		</tr>
+		<thead>
+			<tr>
+				<th>
+					<h4 class="table__title">Currency</h4>
+				</th>
+				<th>
+					<h4 class="table__title">Price (USD)</h4>
+				</th>
+			</tr>
+		</thead>
 
-		<tr v-for="value in crypto" :key="value.id">
-			<td>
-				<div class="table__cell">
-					<img :src="value.icon" class="table__icons" />
-					<p class="table__nameCoin">{{ value.name }}</p>
-				</div>
-			</td>
-			<td>
-				<p class=".table__price--usdc">{{ cryptoSaved[value.id]?.usd }}</p>
-			</td>
-		</tr>
+		<tbody>
+			<tr v-for="value in crypto" :key="value.id">
+				<td>
+					<div class="table__cell">
+						<img :src="value.icon" class="table__icons" />
+						<p class="table__nameCoin">{{ value.name }}</p>
+					</div>
+				</td>
+				<td>
+					<p class=".table__price--usdc">{{ cryptoSaved[value.id]?.usd }}</p>
+				</td>
+			</tr>
+		</tbody>
 	</table>
 </template>
+
 <style></style>
